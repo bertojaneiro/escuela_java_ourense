@@ -4,7 +4,7 @@
  * and open the template in the editor.
  */
 
-import com.vn.IntroJava.Ordenamiento;
+import com.vn.IntroJava.funcionesBasicas.Ordenamiento;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
