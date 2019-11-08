@@ -8,6 +8,7 @@ package com.vn.introjava.tests.poo;
 import com.vn.introjava.poo.vehiculos.Coche;
 import com.vn.introjava.poo.vehiculos.CocheRally;
 import java.util.ArrayList;
+import java.util.HashMap;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
@@ -51,8 +52,22 @@ public class ProbarColecciones {
         for (CocheRally miCoche : misCoches) {
             miCoche.avanzar();
         }
+    }
     
     
+    public void testColecciones(){
+        HashMap<String, Coche> cochicos = new HashMap<>();
+        
+        cochicos.put("Lunes", new Coche("ford"));
+        cochicos.put("Martes", new Coche("fiat"));
+        cochicos.put("Miercoles", new Coche("renault"));
+        cochicos.put("Jueves", new Coche("seat"));
+        cochicos.put("Viernes", new Coche("bmw"));
+        cochicos.put("Sabado", new Coche("masserati"));
+        cochicos.put("Domingo", new Coche("pontiac"));
+        System.out.println(cochicos.get("Lunes"));
+        System.out.println(cochicos.get("Martes"));
+        System.out.println(cochicos.get("Miercoles"));
     }
     
 }
