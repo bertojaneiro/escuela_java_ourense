@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="css/style.css" rel="stylesheet">
+        <style>
+
+            *{
+                color:aliceblue;
+            }
+
+            body
+            {
+                background-color: #232323;
+                margin-left:7%;
+                margin-right:7%;
+                padding-left: 3%;
+                padding-right: 3%;
+            }
+            
+            header nav
+            {
+                display: block;
+	            float: right;
+            }
+
+            header ul, header li
+            {
+                margin:0px;
+                display:inline;
+            }
+
+            header li a
+            {
+                font-size: 1.5em;
+                padding-bottom: 1%;
+            }
+
+            header li img
+            {
+                padding-right: 2em;
+                list-style: none;
+            }
+
+            .azul-chillon
+            {
+                background-color: cyan;
+            }
+
+        </style>
+    </head>
+    <body>
+
+        <header>
+
+            <nav>
+                <ul>
+                    <li><img src="img.png" style="width: 30%;" alt="logo"></li>
+                    <li><a href="01_estructura_html.html">menu principal</a></li>
+                    <li><a href="02_ejemplo_css3.html">ejemplo css</a></li>
+                    <li><a href="03_formularios.html">ejemplo formularios</a></li>
+                    <li><a href="04_ejemplos_js.html">ejemplo js</a></li>
+                </ul>
+            </nav>
+            <h1>HOOOOOLAAAAA</h1>
+
+        </header>
+
+        <nav>otro menu</nav>
+
+        <section>
+            <!--los encabezados no se deben usar por estilo sino por semantica-->
+            <h2>encabezado nivel 2</h2>
+            <h3>encabezado nivel 3</h3>
+            
+            <article>
+                <h4>aqui iria un articulo</h4>
+                con el texto bla bla bla...
+            </article>
+
+            <article>
+                <h4>aqui iria otro articulo</h4>
+                con otro texto bla bla bla...
+                <section>
+                    una parte del articulo
+                </section>
+                <section>
+                    otra parte del articulo
+                </section>
+            </article>
+
+            <video src="video.mp4" width="30%" controls></video>
+            
+            <table>
+                <tr>
+                    <th>nombre</th> <!--th para las cabeceras de las columnas-->
+                    <th>apellidos</th>
+                    <th>edad</th>
+                    <th>contacto</th>
+                </tr>
+                <tr>
+                    <td>Ana</td> <!--TD para cada una de las celdas-->
+                    <td>Perez</td>
+                    <td>40</td>
+                    <td><a href="mailto://ana_perez@vn.com">Enviar email</a></td>
+                </tr>
+                <tr>
+                    <td>Juan</td> <!--TD para cada una de las celdas-->
+                    <td>Perez</td>
+                    <td>40</td>
+                    <td><a href="tel://910001122">llamar</a></td>
+                </tr>
+            </table>
+
+        </section>
+
+        <aside>
+            <p>tipico submenu con enlaces de interes</p>
+
+            <ul>
+                <li><a href="https://www.w3schools.com/">w3schools</a></li>
+                <li><a href="https://developer.mozilla.org/es/">web mozilla</a></li>
+            </ul>
+
+        </aside>
+
+    <footer>
+        <nav>
+            <ul>
+                <li>enlaces a RRSS</li>
+            </ul>
+        </nav>
+        <address>
+            Avenida buenos aires, 40, etc
+        </address>
+    </footer>
+
+
+    </body>
+</html>
