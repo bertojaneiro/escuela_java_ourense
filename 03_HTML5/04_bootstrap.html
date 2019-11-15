@@ -16,41 +16,29 @@
         <img src="img.png" style="width: 30%;" alt="logo">
         <h1>HOOOOOLAAAAA</h1>
 
-
-        <nav>
-            <ul>
-                <li>
-                    <a href="01_estructura_html.html">menu principal</a>
-                </li>
-                <li>
-                    <a href="02_ejemplo_css3.html">ejemplo css</a>
-                </li>
-                <li>
-                    <a href="03_formularios.html">ejemplo formularios</a>
-                </li>
-                <li>
-                    <a href="04_ejemplos_js.html">ejemplo js</a>
-                </li>
-            </ul>
+        <nav class="nav justify-content-center">
+            <a class="nav-link active" href="01_estructura_html.html">menu principal</a>
+            <a class="nav-link active" href="02_ejemplo_css3.html">ejemplo css</a>
+            <a class="nav-link active" href="03_formularios.html">ejemplo formularios</a>
+            <a class="nav-link active" href="04_ejemplos_js.html">ejemplo js</a>
         </nav>
-
 
     </header>
 
 
     <nav>otro menu</nav>
 
-        <section>
+        <section class="row">
             <!--los encabezados no se deben usar por estilo sino por semantica-->
-            <h2>encabezado nivel 2</h2>
-            <h3>encabezado nivel 3</h3>
+            <h2 class="col-12">encabezado nivel 2</h2>
+            <h3 class="col-12">encabezado nivel 3</h3>
             
-            <article style="border:black solid;"class="col-6">
+            <article class="col-lg-4 col-md-6 col-sm-12">
                 <h4>aqui iria un articulo</h4>
                 con el texto bla bla bla...
             </article>
 
-            <article style="border:black solid;"class="col-6">
+            <article class="col-lg-4 col-md-6 col-sm-12">
                 <h4>aqui iria otro articulo</h4>
                 con otro texto bla bla bla...
                 <section>
@@ -60,7 +48,7 @@
                     otra parte del articulo
                 </section>
             </article>
-            <article style="border:black solid;"class="col-6">
+            <article class="col-lg-4 col-md-6 col-sm-12">
                     <h4>aqui iria otro articulo</h4>
                     con otro texto bla bla bla...
                     <section>
@@ -71,27 +59,44 @@
                     </section>
                 </article>
 
-            <video src="video.mp4" width="35%" controls></video>
+            <video src="video.mp4" width="30%" controls></video>
             
-            <table>
-                <tr>
-                    <th>nombre</th> <!--th para las cabeceras de las columnas-->
-                    <th>apellidos</th>
-                    <th>edad</th>
-                    <th>contacto</th>
-                </tr>
-                <tr>
-                    <td>Ana</td> <!--TD para cada una de las celdas-->
-                    <td>Perez</td>
-                    <td>40</td>
-                    <td><a href="mailto://ana_perez@vn.com">Enviar email</a></td>
-                </tr>
-                <tr>
-                    <td>Juan</td> <!--TD para cada una de las celdas-->
-                    <td>Perez</td>
-                    <td>40</td>
-                    <td><a href="tel://910001122">llamar</a></td>
-                </tr>
+            <table class="col-12 table  table-striped table-bordered table-hover table-sm">
+                <thead class="thead-dark">
+                        <tr>
+                            <th>nombre</th> <!--th para las cabeceras de las columnas-->
+                            <th>apellidos</th>
+                            <th>edad</th>
+                            <th>contacto</th>
+                        </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Ana</td> <!--TD para cada una de las celdas-->
+                        <td>Perez</td>
+                        <td>40</td>
+                        <td><a href="mailto://ana_perez@vn.com">Enviar email</a></td>
+                    </tr>
+                    <tr>
+                        <td>Juan</td> <!--TD para cada una de las celdas-->
+                        <td>Perez</td>
+                        <td>40</td>
+                        <td><a href="tel://910001122">llamar</a></td>
+                    </tr>
+                    <tr>
+                        <td>Ana</td> <!--TD para cada una de las celdas-->
+                        <td>Perez</td>
+                        <td>40</td>
+                        <td><a href="mailto://ana_perez@vn.com">Enviar email</a></td>
+                    </tr>
+                    <tr>
+                        <td>Juan</td> <!--TD para cada una de las celdas-->
+                        <td>Perez</td>
+                        <td>40</td>
+                        <td><a href="tel://910001122">llamar</a></td>
+                    </tr>
+                </tbody>
+                
             </table>
 
         </section>
