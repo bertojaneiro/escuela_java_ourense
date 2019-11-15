@@ -1,0 +1,55 @@
+
+*{
+    color:aliceblue;
+}
+
+body
+{
+    background-color: #232323;
+    margin-left:7%;
+    margin-right:7%;
+    padding-left: 3%;
+    padding-right: 3%;
+}
+
+header nav
+{
+    display: block;
+    float: right;
+}
+
+header li
+{
+    margin:0px;
+    display:inline;
+}
+
+header li a
+{
+    font-size: 1.5em;
+    padding-right: 1em;
+}
+
+header li img
+{
+    display: none;
+    padding-right: 2em;
+    list-style: none;
+}
+
+.azul-chillon
+{
+    background-color: cyan;
+}
+
+a:hover
+{
+    font-size: 1.6em;
+    transition: 0.3s;
+}
+
+.marco-colocado
+{
+    
+
+}
