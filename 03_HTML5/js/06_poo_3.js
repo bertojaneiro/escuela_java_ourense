@@ -37,8 +37,6 @@ var otroObjeto = {
     }
 }
 
-
-
 otroObjeto.prop_5="Propiedad cinco";
 otroObjeto.prop_9="Propiedad nueve";
 var divTris = document.getElementById("contenido_tris");
