@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <label>Evento con listener</label>
+    <input id="input_listo1"/>
+    <input id="btn_listo1" type="button" value="Pulsame">
+    <div id="info_evento1"></div>
+    <label>Evento con listener 2</label>
+    <input id="input_listo2"/>
+    <input id="btn_listo2" type="button" value="Pulsa este otro">
+    <div id="info_evento2"></div>
+
+    <script src="js/09_eventos_class.js"></script>
+    <script>
+
+        window.addEventListener("load", function(){
+            
+            let gestorEvListo = new GestorEventosES6(
+                "input_listo1",
+                "btn_listo1",
+                "info_evento1");
+
+            let gestorEvOtro = new GestorEventosES6(
+                "input_listo2",
+                "btn_listo2",
+                "info_evento2");
+
+        });
+        
+    </script>
+</body>
+</html>
