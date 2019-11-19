@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <label>Evento con listener</label>
+    <input id="input_listo"/>
+    <input id="btn_listo" type="button">
+    <div id="info_evento">
+        
+    </div>
+
+    <br/>
+    <script>
+        let input_listo=document.getElementById("input_listo");
+        let btn_listo=document.getElementById("btn_listo");
+        btn_listo.value="Pulsa";
+        btn_listo.addEventListener("click", funCallBackAlPulsar);
+        btn_listo.addEventListener("click", funCallBackAlPulsar_Dos);
+
+        function funCallBackAlPulsar(evento){
+
+            input_listo.value="Tipo evento "+evento.type;
+            let info_evento = document.getElementById("info_evento");
+            evento.currentTarget.value="Puedes repetir";
+            info_evento.innerHTML += "evento.currentTarget.id= "+evento.currentTarget.id;
+            info_evento.className="div-marco";
+        }
+        function funCallBackAlPulsar_Dos(evento) {
+            document.getElementsByTagName("body")[0].className="fondo-body";
+
+        }
+
+
+    </script>
+    <style>
+    .div-marco{
+        border:blue solid;
+    }
+    .fondo-body{
+        background-color: lightgreen;
+    }
+    
+    </style>
+</body>
+</html>
