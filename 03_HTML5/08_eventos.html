@@ -8,38 +8,76 @@
 </head>
 <body>
     <label>Evento con listener</label>
-    <input id="input_listo"/>
-    <input id="btn_listo" type="button">
-    <div id="info_evento">
-        
-    </div>
+    <input id="input_listo1"/>
+    <input id="btn_listo1" type="button">
+    <div id="info_evento1"></div>
+    <label>Evento con listener 2</label>
+    <input id="input_listo2"/>
+    <input id="btn_listo2" type="button">
+    <div id="info_evento2"></div>
+
 
     <br/>
     <script>
-        let input_listo=document.getElementById("input_listo");
-        let btn_listo=document.getElementById("btn_listo");
+        
+        /*
+        let btn_listo=document.getElementById("btn_listo1");
         btn_listo.value="Pulsa";
         btn_listo.addEventListener("click", funCallBackAlPulsar);
         btn_listo.addEventListener("click", funCallBackAlPulsar_Dos);
+        btn_listo.listo="input_listo1";
+        btn_listo.evento="info_evento1";*/
 
-        function funCallBackAlPulsar(evento){
+        
+        /*
+        let btn_listo2=document.getElementById("btn_listo2");
+        btn_listo2.value="Pulsa2";
+        btn_listo2.addEventListener("click", funCallBackAlPulsar);
+        btn_listo2.addEventListener("click", funCallBackAlPulsar_Dos);
+        btn_listo2.listo="input_listo2";
+        btn_listo2.evento="info_evento2";*/
 
-            input_listo.value="Tipo evento "+evento.type;
-            let info_evento = document.getElementById("info_evento");
-            evento.currentTarget.value="Puedes repetir";
-            info_evento.innerHTML += "evento.currentTarget.id= "+evento.currentTarget.id;
-            info_evento.className="div-marco";
+        class GestorBoton{
+
+            constructor(btn, inp, evn){
+                this.btn=document.getElementById(btn);
+                this.inp=document.getElementById(inp);
+                this.evn=document.getElementById(evn);
+                this.btn.value="Pulsame";
+                this.btn.addEventListener("click", this.funCallBackAlPulsar);
+                this.btn.addEventListener("click", funCallBackAlPulsar_Dos);
+            }
+
+            funCallBackAlPulsar= (evento) =>{
+                this.inp.value="Tipo evento "+evento.type;
+                this.btn.value="Puedes repetir";
+                this.evn.innerHTML += "evento.currentTarget.id= "+this.btn.id;
+                this.evn.className="div-marco";
+                this.btn.removeEventListener("click", this.funCallBackAlPulsar);
+            }
         }
+
         function funCallBackAlPulsar_Dos(evento) {
             document.getElementsByTagName("body")[0].className="fondo-body";
-
         }
 
+        var btn_listo2 = new GestorBoton(
+            "btn_listo2",
+            "input_listo2",
+            "info_evento2"
+            );
+        var btn_listo1 = new GestorBoton(
+            "btn_listo1",
+            "input_listo1",
+            "info_evento1"
+            );
 
     </script>
     <style>
+
     .div-marco{
         border:blue solid;
+        background-color: lightgray;
     }
     .fondo-body{
         background-color: lightgreen;
