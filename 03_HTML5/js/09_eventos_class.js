@@ -39,4 +39,8 @@ class GestorEventosES6{
     funCallBackAlPulsar_Dos = (evento) => {
         this.input.style="background-color:lightblue;";
     }
+
+    static metodoStatico(){
+        alert("metodo estatico");
+    }
 }

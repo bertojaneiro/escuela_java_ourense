@@ -15,12 +15,23 @@
     <input id="input_listo2"/>
     <input id="btn_listo2" type="button" value="Pulsa este otro">
     <div id="info_evento2"></div>
+    <div onclick="alert('llamada evento desde html')">
+        Zona onclick alert
+    </div>
+    <div id="quiereUnOnClick">
+        Zona elemDOM.onclick=function(..){...}
+    </div>
 
     <script src="js/09_eventos_class.js"></script>
     <script>
 
         window.addEventListener("load", function(){
             
+            let quiereUnOnClick = document.getElementById("quiereUnOnClick");
+            quiereUnOnClick.onclick= function(evento){
+                alert("Llamada desde JS, propiedad onclick");
+            }
+
             let gestorEvListo = new GestorEventosES6(
                 "input_listo1",
                 "btn_listo1",
