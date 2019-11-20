@@ -7,10 +7,20 @@ jQuery(document).ready(function(){
     $("td:nth-child(5)").click(()=>{
         alert("un click desde jQ");
     });
-    $(".articulo").slideUp();
-    $("#otro_menu").click(function(){
-        $(this).slideUp();
-        $(".articulo").slideDown();
-
+    $("#otro_menu").html("<h2>Menu de articulos</h2>");
+    $("article h4").each(function(){
+        let idn= $(this).parent().attr("id");
+        $(this).wrap("<a href='#"+idn+"'></a>");
+    });
+    $("article a").appendTo("#otro_menu");
+    
+    $("#otro_menu a").attr("style","display: inline-block;");
+    $("article > *").slideUp("fast");
+    $("article").attr("style","border: none;");
+    $("#otro_menu a").click(function(){
+        $($(this).attr("href")).children().slideDown();
+        $($(this).attr("href")).attr("style","border: black solid;");
+        $($(this).attr("href")).siblings().children().slideUp();
+        $($(this).attr("href")).siblings().attr("style","border: none;");
     });
 });
