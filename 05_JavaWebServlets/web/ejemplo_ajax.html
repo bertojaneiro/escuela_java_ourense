@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Ejemplo peticion ajax</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div>Ejemplo peticion ajax</div>
+        <p>pedimos datos a un servlet</p>
+        <div id="div_datos_json"></div>
+        <div id="div_datos"></div>
+        
+        <input id="btn_peticion_ajax" type="button" value="AJAX"/>
+        <input id="btn_peticion_ajax_jq" type="button" value="AJAX jQuery"/>
+        <div>
+            <input type="text" id="nombre" placeholder="introduzca nombre" size="10" required="required"/><br/>
+            <input type="email" id="email" placeholder="introduzca email" size="10" required="required"/><br/>
+            <input id="btn_peticion_ajax_json" type="button" value="AJAX jQuery POST"/>
+        </div>
+        
+        <script src="js/jquery-3.4.1.js" type="text/javascript"></script>
+        <script src="js/ejemplo_ajax.js" type="text/javascript"></script>
+        <script src="js/ejemplo_ajax_jq.js" type="text/javascript"></script>
+        
+    </body>
+</html>
