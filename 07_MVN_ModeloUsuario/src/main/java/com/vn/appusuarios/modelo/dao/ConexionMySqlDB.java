@@ -15,10 +15,10 @@ import java.sql.Statement;
  *
  * @author alberto
  */
-public class ConexionDerby {
+public class ConexionMySqlDB {
 
     //private static final String URL = "jdbc:derby://localhost:1527/06_ModeloUsuariosBBDD";
-    private static final String URL = "jdbc:derby:memory:06_ModeloUsuariosBBDD;create=true";
+    private static final String URL = "jdbc:mysql://localhost:3306/db_usuarios";
     private static final String USER = "root";
     private static final String PASS = "abc123.";
     private static boolean driversCargados = false;
@@ -27,13 +27,13 @@ public class ConexionDerby {
 //        
 //    }
     
-    public static Connection getConexion() throws ClassNotFoundException, SQLException{
+    public static Connection getConexion() throws ClassNotFoundException, SQLException, Exception{
         Connection con =null;
 
         if (!driversCargados) {
-        Class.forName("org.apache.derby.jdbc.ClientDriver");
-        //DriverManager.registerDriver(new org.apache.derby.jdbc.EmbeddedDriver());
-        crearDBusuarios();
+        Class.forName("com.mysql.cj.jdbc.Driver").newInstance();
+        DriverManager.registerDriver(new com.mysql.cj.jdbc.Driver());
+        //crearDBusuarios();
         driversCargados = true;
         }
         con = DriverManager.getConnection(URL, USER, PASS);
@@ -41,7 +41,7 @@ public class ConexionDerby {
         
         return con;
     }
-    private static void crearDBusuarios() throws SQLException {
+    private static void crearDBusuarios() throws SQLException, Exception {
     	Connection conex = DriverManager.getConnection(URL, USER, PASS);
     	Statement stmt = conex.createStatement();
     	String createTableSQL = "CREATE TABLE usuario (\r\n" + 
