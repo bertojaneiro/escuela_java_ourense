@@ -5,8 +5,10 @@
 --%>
 
 <!DOCTYPE html>
+<%@page contentType="text/html" pageEncoding="UTF-8" %>
 <%!  
     String head() {  
-        return "<head><meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\">";
+        return "<head><meta http-equiv=\"Content-Type\" content=\"text/html\" charset=\"UTF-8\"/>"
+                +"<title>Aplicacion gestion usuarios MVC JSP </title></head>";
     } 
 %>
