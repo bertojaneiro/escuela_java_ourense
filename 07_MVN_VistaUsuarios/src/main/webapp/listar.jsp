@@ -3,6 +3,8 @@
     Created on : 21-feb-2019, 20:42:40
     Author     : IEUser
 --%>
+<%@page import="java.util.Map.Entry"%>
+<%@page import="java.util.HashMap"%>
 <%@page import="com.vn.appusuarios.modelo.logica.UsuarioServicio"%>
 <%@page import="com.vn.appusuarios.modelo.Usuario"%>
 <%@page import="java.util.ArrayList"%>
@@ -17,7 +19,7 @@
     <body>
         <h1>Todos los usuarios</h1>
         <div border="2">    
-			<% for (Map.Entry<i, usu>) %>
+			<% for (Entry<i, usu> entry : todosUsuarios.entrySet()){ Usuario usu = entry.getValue(); %>
                 <form action="usuarios.do" method="post" name="form">                 
                     <input id="id" name="id" type="text"  size="4" readonly="true" value="<%= usu.getId() %>"/>
                     <input id="nombre" name="nombre" type="text" required="true" value="<%= usu.getNombre() %>"/>
@@ -31,6 +33,7 @@
                     <input type="submit" value="ELIM"                           
                            onclick="Array.from(document.getElementsByClassName('method')).forEach((thisInput) => { thisInput.value='DELETE'; })"/><br/>
                 </form>
+                <% } %>
         </div>
     </body>
 </html>
