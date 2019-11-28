@@ -5,13 +5,14 @@
  */
 package com.vn.appusuarios.modelo;
 
+import java.io.Serializable;
 import java.util.Objects;
 
 /** POJO que almacena las propiedades de casa usuario
- *
+ * Ahora el usuario puede ser un BEAN serializable
  * @author pc diego
  */
-public class Usuario {
+public class Usuario implements Serializable{
 
     int id, edad;
     String nombre, email, password;

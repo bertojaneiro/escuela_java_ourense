@@ -34,3 +34,6 @@ nbdist/
 .nb-gradle/
 
 # TODO eclipse & VSCode files
+/.metadata/
+/07_MVN_ModeloUsuario/target/
+/07_MVN_ModeloUsuario/bin/target/
